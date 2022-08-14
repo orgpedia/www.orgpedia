@@ -1,10 +1,181 @@
-<html>
-  <head>
-    <title> Welcome to orgpedia </title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body>
-    <h1> Welcome to Orgpedia > Cabsec</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cover Page</title>
 
-  </body>
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="css/output.css">
+	<script src="https://unpkg.com/lunr/lunr.js"></script>		
+	<script src="js/search.js"></script>
+	<script defer data-domain="orgpedia.in" src="https://plausible.io/js/plausible.js"></script>	
+	<script>
+	  const url = "index.html";
+	</script>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div
+                class="bg-black text-gray-50 h-[98px] flex top-0 items-center px-2 lg:px-4 py-2.5 border-b-[9px] border-blue-500 fixed z-50 w-full">
+                <div class="container flex flex-wrap justify-center xs:justify-between items-center mx-auto ">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center">
+                        <div
+                            class="w-[45px] sm:w-[53px] h-[45px] sm:h-[53px] bg-white flex justify-center items-center rounded-full mr-2.5">
+                            <p class="text-[30px] text-black w-[53px] h-[53px] text-center"><span
+                                    class="text-blue-500">o</span>p
+                            </p>
+                        </div>
+                        <div class=" text-[45px] text-white flex flex-col items-center justify-center">
+                            <img src="./assets/images/logo.png" class="w-32 xs:w-48 lg:w-full" alt="">
+                        </div>
+                    </a>
+
+
+                    <!-- Language Select Input -->
+                    <div class=" lg:order-3">
+                        <div class=" hidden xs:block">
+                            <div class="flex items-center">
+                                <button id="language-button"
+                                    class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 text-sm text-center text-gray-50 bg-black "
+                                    type="button">
+                                    English
+                                </button>
+				<select name="lang_menu" id="lang_menu" class="bg-black text-gray-50 text-sm rounded-r-lg outline-none" onchange="select_language()">
+                                    <option selected="ignore">Select Language</option>
+                                    <option value="en">English</option>
+                                    <option value="as">অসমীয়া(Assamese)</option>
+                                    <option value="bn">বাংলা(Bangla)</option>
+                                    <option value="brx">बड़ो(Boro)</option>
+				    <option value="doi">डोगरी(Dogri)</option>
+				    <option value="gu">ગુજરાતી(Gujrati)</option>
+				    <option value="hi">हिन्दी(Hindi)</option>
+				    <option value="kn">ಕನ್ನಡ(Kannada)</option>
+				    <option value="gom">कोंकणी(Konkani)</option>
+				    <option value="mai">मैथिली(Maithili)</option>
+				    <option value="mni">ꯃꯩꯇꯩꯂꯣꯟ(Meitei)</option>
+				    <option value="ml">മലയാളം(Malayalam)</option>
+				    <option value="mr">मराठी(Marathi)</option>
+				    <option value="ne">नेपाली(Nepali)</option>
+				    <option value="or">ଓଡ଼ିଆ(Odia)</option>
+				    <option value="pa">ਪੰਜਾਬੀ(Punjabi)</option>
+  				    <option value="sa">संस्कृत(Sanskrit)</option>
+  				    <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ(Santhali)</option>
+  				    <option value="sd">सिंधी(Sindhi)</option>
+  				    <option value="te">తెలుగు(Telgu)</option>
+  				    <option value="ta">தமிழ்(Tamil)</option>
+  				    <option value="ur">اُردُو(Urdu)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Container -->
+        <div class="flex p-5 gap-5 pt-[120px] container mx-auto">
+
+            <main class="w-full min-h-screen">
+                <section>
+                    <div class="container mx-auto lg:p-20">
+                        <div class="">
+                            <div class="flex flex-col md:flex-row gap-6 mb-8">
+                                <div class="flex-1">
+                                    <div class=" text-lg font-semibold text-white p-2 bg-blue-500">
+                                        <span>Vision</span>
+                                    </div>
+                                    <div class=" px-7  py-4  bg-gray-200  min-h-[400px]">
+
+					   All organizations (public or private) have one thing in common- they are made up
+                                          of people. However, majority of organizations present an image that hides most of
+                                          their people strctures making them feel inaccessible and opaque. <br><br><p>Orgpedia aims enable
+                                           organizations to shine light on their people and their structures.
+                                    </div>
+                                </div>
+                                <div class="flex-1 ">
+                                    <div class=" text-lg font-semibold text-white p-2 bg-blue-500">
+                                        <span>Mission</span>
+                                    </div>
+                                    <div class=" px-7  py-4  bg-gray-100 min-h-[400px]">
+                                        <ul class="list-disc list-inside text-base text-gray-600">
+                                          <li class="mb-2">
+					    Orgpedia will collate publicly
+available information about
+organizations and present the
+information about people and
+their roles, responsibilities,
+hierarchies, budgets, jurisdictions,
+authority.</li>
+
+<li>Given the public nature of the
+information it will provide an easy
+way to share, study and document
+organizations.</li>
+
+<li>Orgpedia will allow people to
+build organization information
+either in public or free domain.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <h2 class="text-blue-500 text-lg font-bold text-left">Projects: </h2>
+                                <div onclick="location.href='prime.html';" style="cursor: pointer;"
+				  class="flex items-center gap-10 bg-gray-200 p-6 max-w-[600px] my-14 mx-auto">
+                                    <div class=" "">
+                                            <img src=" ./assets/images/cover-pager-img.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h3 class="text-blue-500 font-bold">Ministers of India</h3>
+                                        <p class="text-base text-gray-600">Analysis of the ministers in the Indian
+                                            Cabinet from 1947 to date.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer Bottom -->
+        <footer>
+            <div class=" bg-gray-200 w-full p-5 z-50 relative hidden sm:block">
+                <div class=" flex flex-col sm:flex-row items-center gap-2.5 text-gray-500 text-sm">
+                    <img src="./assets/images/footer-logo.png" alt="">
+                    <div class="flex">
+                        <p class=" xs:border-l xs:border-r border-gray-500 px-2.5 hover:underline"><a
+                                href="disclaimer.html">Disclaimer</a></p>
+
+                    </div>
+                    <div class=" flex gap-2">
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"
+                                height="30">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z" />
+                            </svg>
+                        </span>
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"
+                                height="30">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm2 6a1 1 0 0 1 1 1v4h-1.5v4h-3v-4H9v-4a1 1 0 0 1 1-1h4zm-2-5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/script.js"></script>
+    </body>
+
 </html>

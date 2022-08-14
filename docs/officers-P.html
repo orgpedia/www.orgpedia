@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ministers of India</title>
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="css/output.css">
+	<script src="https://unpkg.com/lunr/lunr.js"></script>	
+	<script src="js/search.js"></script>
+	<script defer data-domain="orgpedia.in" src="https://plausible.io/js/plausible.js"></script>	
+	
+	<style>
+	  .hide-element,
+	  .primary.hide-element {
+	      display: none;
+	  }
+	</style>
+	<script>
+	  const url = "ministers-P.html";
+	</script>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div
+                class="bg-black text-gray-50 h-[98px] flex top-0 items-center px-2 lg:px-4 py-2.5 border-b-[9px] border-blue-500 fixed z-50 w-full">
+                <div class="container flex flex-wrap justify-between items-center mx-auto ">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center order-2 lg:order-1">
+                        <div class="w-[53px] h-[53px] bg-white flex justify-center items-center rounded-full mr-2.5">
+                            <p class="text-[30px] text-black w-[53px] h-[53px] text-center"><span
+                                    class="text-blue-500">o</span>p
+                            </p>
+                        </div>
+                        <div class=" text-[45px] text-white flex flex-col items-center justify-center">
+                            <img src="./assets/images/logo.png" class="w-32 xs:w-48 lg:w-full" alt="">
+                            <p
+                                class="text-xs xs:text-sm text-right -mb-3 lg:mb-0 -mr-9 xs:-mr-[70px] lg:-mr-20 xs:-mt-0.5">
+                                Ministers of India</p>
+                        </div>
+                    </a>
+
+                    <!--  Search Input -->
+                    <div class="lg:min-w-[450px] order-1 lg:order-2">
+                        <div class="hidden lg:block">
+                            <form id="search-form" name="searchForm" role="form" onsubmit="return false">
+                                <div class="flex items-center gap-4 ">
+                                    <span class="text-xs whitespace-nowrap">Search by</span>
+                                    <div class="relative search-container">
+				      <i class="fa fa-search"></i>				      
+                                        <input type="search" id="search" name="q" autocomplete="off"
+                                            class="block h-[30px] lg:w-[450px] text-sm pl-4 text-gray-900 bg-white outline-none"
+                                            placeholder="Enter keywords ministers orders" required="">
+                                        <div
+                                            class="flex absolute inset-y-0 right-0.5 items-center pl-3 mr-1.5 pointer-events-none">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-blue-500 dark:text-gray-400"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Toggle Menu Btn  -->
+                        <button data-menu-open-btn="" type="button" class="inline-flex lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-11 w-11" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Language Select Input -->
+                    <div class=" order-3 lg:order-3">
+                        <div class="hidden lg:block">
+                            <div class="flex items-center">
+                                <button id="language-button"
+                                    class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm text-center text-gray-50 bg-black "
+                                    type="button">
+                                    English
+                                </button>
+				<select name="lang_menu" id="lang_menu" class="bg-black text-gray-50 text-sm rounded-r-lg outline-none" onchange="select_language()">
+                                    <option selected="ignore">Select Language</option>
+                                    <option value="en">English</option>
+                                    <option value="as">অসমীয়া(Assamese)</option>
+                                    <option value="bn">বাংলা(Bangla)</option>
+                                    <option value="brx">बड़ो(Boro)</option>
+				    <option value="doi">डोगरी(Dogri)</option>
+				    <option value="gu">ગુજરાતી(Gujrati)</option>
+				    <option value="hi">हिन्दी(Hindi)</option>
+				    <option value="kn">ಕನ್ನಡ(Kannada)</option>
+				    <option value="gom">कोंकणी(Konkani)</option>
+				    <option value="mai">मैथिली(Maithili)</option>
+				    <option value="mni">ꯃꯩꯇꯩꯂꯣꯟ(Meitei)</option>
+				    <option value="ml">മലയാളം(Malayalam)</option>
+				    <option value="mr">मराठी(Marathi)</option>
+				    <option value="ne">नेपाली(Nepali)</option>
+				    <option value="or">ଓଡ଼ିଆ(Odia)</option>
+				    <option value="pa">ਪੰਜਾਬੀ(Punjabi)</option>
+  				    <option value="sa">संस्कृत(Sanskrit)</option>
+  				    <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ(Santhali)</option>
+  				    <option value="sd">सिंधी(Sindhi)</option>
+  				    <option value="te">తెలుగు(Telgu)</option>
+  				    <option value="ta">தமிழ்(Tamil)</option>
+  				    <option value="ur">اُردُو(Urdu)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Search box  -->
+                        <div>
+                            <span data-search-box="" class="lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-white w-8 h-8"
+                                    viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z">
+                                    </path>
+                                </svg>
+                            </span>
+
+                            <div data-search-box-toggle="" class=" hidden duration-700 lg:hidden ease-in-out">
+                                <span data-search-box-close=""
+                                    class="bg-black/50 h-screen w-screen z-40 absolute top-[98px] left-0"></span>
+                                <div
+                                    class="font-sans absolute  top-[98px] left-0 w-screen text-white flex items-center min-h-screen justify-center">
+                                    <div class="relative rounded overflow-hidden flex -mt-24 z-50 mobileSearchContainer">
+                                        <input type="search" id="mobileSearch" name="mq" autocomplete="off"
+                                            class="px-4 py-2 text-base outline-none text-center border-b-2 border-dashed border-t-0 border-l-0 border-r-0 focus:border-white border-white min-w-[300px] md:min-w-[400px] w-full bg-black/0"
+                                            placeholder="Search...">
+                                        <button class="absolute right-0 top-1 flex items-center justify-center  ">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="fill-current text-white w-8 h-8" viewBox="0 0 24 24" width="24"
+                                                height="24">
+                                                <path
+                                                    d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Container -->
+        <div class="flex p-5 gap-5 pt-[120px]">
+
+            <!-- Side Navigation Menu -->
+            <div data-sidebar=""
+                class="min-w-[300px] lg:min-w-[170px] max-w-[170px] fixed h-screen top-0 left-0 lg:top-auto lg:left-auto  z-50 w-full ease-in lg:ease-linear duration-200  -translate-x-full lg:-translate-x-0">
+                <div class="container fixed">
+                    <nav class="h-screen shadow-md bg-gray-200 px-1  z-40">
+                        <div class="flex justify-end w-full py-4 px-2 lg:hidden ">
+                            <button data-sidebar-close-btn="" type="button"
+                                class="inline-flex w-10 h-10 justify-center items-center bg-white hover:bg-slate-100 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current w-9 h-9 text-black"
+                                    viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="p-4 pl-5 text-xs text-blue-500">
+                            <li class="mb-3.5">
+                                <a class="" href="prime.html">
+                                    Prime Ministers
+                                </a>
+                            </li class="mb-3.5">
+                            <li class="mb-3.5">
+                                <a class="" href="deputy.html">
+                                    Deputy Prime Ministers
+                                </a>
+                            </li>
+                            <li class="mb-3.5">
+                                <a class="" href="officers-A.html">
+                                    <span data-all-minister="">Ministers</span>
+                                    <ul class="text-black font-semibold ml-4 hidden" data-minister-list="">
+                                        <li class="my-2">
+                                            <a href="#" class="hover:text-blue-500">Sumitra Mahajan</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 1</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 2</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 3</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 4</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 5</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 6</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 7</a>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mb-3.5">
+                                <a class="" href="orders-m1.html">
+                                    Orders
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+            <main class="w-full lg:max-w-[918px] lg:ml-[190px] min-h-screen">
+	      <section class="search-results hide-element">
+                <div class=" sm:container mx-auto ">
+                    <div class="flex gap-1.5 items-center justify-start text-blue-500 text-sm mb-4">
+                        <span class="cursor-pointer">Home</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                class="fill-current w-5 h-5 text-gray-500" width="24" height="24">
+                                <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="cursor-pointer"> Search</span>
+                    </div>
+                    <div class="w-full bg-gray-200 p-3 sm:p-6">
+                      <h2 id="query" class="text-2xl text-blue-500 font-bold mb-6"></h2>
+                      <div id="search-cells" class="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-5 lg:gap-7"></div>
+		    </div>
+		</div>
+	      </section>
+                <section class="primary">	      
+                    <div class=" sm:container mx-auto ">
+                      <div class="flex gap-1.5 items-center justify-start text-blue-500 text-sm mb-4">
+                          <span class="cursor-pointer">Home</span>
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                class="fill-current w-5 h-5 text-gray-500" width="24" height="24">
+                                <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z">
+                                </path>
+                            </svg>
+                          </span>
+                          <span class="font-bold text-black">Ministers (P)</span>			  
+                        </div>
+                        <div class="w-full bg-gray-200 p-3 sm:p-6">
+                            <h2 class="text-2xl text-blue-500 font-bold mb-6">MINISTERS (P)</h2>
+                            <div class="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-5 lg:gap-7">
+			      
+                                <div onclick="location.href='officer-363.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/3000.jpg" class="w-[75px] h-[106px]" alt="P. Chidambaram">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Chidambaram</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1985 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-244.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2543.gif" class="w-[75px] h-[106px]" alt="P. V. Narasimha Rao">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. V. Narasimha Rao</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1980 - 1996</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-557.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/4195.jpg" class="w-[75px] h-[106px]" alt="Pranab Mukherjee">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pranab Mukherjee</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1973 - 2012</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-321.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/3557.jpg" class="w-[75px] h-[106px]" alt="Praful Patel">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Praful Patel</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2004 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-720.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/540.gif" class="w-[75px] h-[106px]" alt="Pramod Mahajan">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pramod Mahajan</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1996 - 2003</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-21.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/3740.jpg" class="w-[75px] h-[106px]" alt="Panabaka Lakshmi">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Panabaka Lakshmi</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2004 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-242.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/394.jpg" class="w-[75px] h-[106px]" alt="P. A. Sangma">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. A. Sangma</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1980 - 1996</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-56.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/42.jpg" class="w-[75px] h-[106px]" alt="Pawan Kumar Bansal">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pawan Kumar Bansal</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2006 - 2013</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-714.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Piyush_Goyal_(cropped).jpg" class="w-[75px] h-[106px]" alt="Piyush Goyal">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Piyush Goyal</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2014 - 2024</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-276.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/104.jpg" class="w-[75px] h-[106px]" alt="Priya Ranjan Dasmunsi">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Priya Ranjan Dasmunsi</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1986 - 2009</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-718.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Shri_Prakash_Javadekar,_Minister_of_State_for_Information_and_Broadcasting_(Independent_Charge),_Environment,_Forest_and_Climate_Change_(Independent_Charge)_and_Parliamentary_Affairs(cropped).jpg" class="w-[75px] h-[106px]" alt="Prakash Javadekar">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prakash Javadekar</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2014 - 2021</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-702.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/341.jpg" class="w-[75px] h-[106px]" alt="P. Radhakrishnan">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Radhakrishnan</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2000 - 2004</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-295.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/3482.jpg" class="w-[75px] h-[106px]" alt="Prithviraj Chavan">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prithviraj Chavan</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2004 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-712.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/215.jpg" class="w-[75px] h-[106px]" alt="Paty Ripple Kyndiah">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Paty Ripple Kyndiah</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2004 - 2009</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-368.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/546.jpg" class="w-[75px] h-[106px]" alt="P. M. Sayeed">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. M. Sayeed</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1979 - 2009</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-704.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://en.wikipedia.org/wiki/File:SHIV_SHANKER,_SHRI_P.jpg" class="w-[75px] h-[106px]" alt="P. Shiv Shankar">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Shiv Shankar</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1980 - 1989</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-722.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="rs_images/Q7240123.png" class="w-[75px] h-[106px]" alt="Prem Chand Gupta">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prem Chand Gupta</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2004 - 2009</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-707.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/139.jpg" class="w-[75px] h-[106px]" alt="Paban Singh Ghatowar">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Paban Singh Ghatowar</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1991 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-724.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/186.jpg" class="w-[75px] h-[106px]" alt="Preneet Kaur">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Preneet Kaur</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2009 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-715.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/4287.jpg" class="w-[75px] h-[106px]" alt="Pradeep Jain Aditya">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pradeep Jain Aditya</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2009 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-711.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Parshottam_Rupala_addressing_the_inaugural_session_of_the_International_Symposium_on_Drafting_a_National_Policy_on_Medicinal_and_Aromatic_Plants_of_India,_in_New_Delhi.jpg" class="w-[75px] h-[106px]" alt="Parsottambhai Rupala">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Parsottambhai Rupala</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2016 - 2024</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-717.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/1951.gif" class="w-[75px] h-[106px]" alt="Prakash Chandra Sethi">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prakash Chandra Sethi</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1962 - 1984</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-708.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Panampilly_statue.jpg" class="w-[75px] h-[106px]" alt="Panampilly Govinda Menon">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Panampilly Govinda Menon</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1966 - 1970</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-721.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/4211.jpg" class="w-[75px] h-[106px]" alt="Pratik Prakashbapu Patil">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pratik Prakashbapu Patil</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2009 - 2014</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-723.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2936.gif" class="w-[75px] h-[106px]" alt="Prem Khandu Thungan">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prem Khandu Thungan</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1980 - 1995</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-222.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/1778.gif" class="w-[75px] h-[106px]" alt="Parimal Ghosh">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Parimal Ghosh</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1967 - 1971</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-657.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2779.jpg" class="w-[75px] h-[106px]" alt="P. J. Kurien">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. J. Kurien</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1991 - 1996</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-192.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2415.gif" class="w-[75px] h-[106px]" alt="Purushottam Kaushik">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Purushottam Kaushik</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1977 - 1980</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-197.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2346.gif" class="w-[75px] h-[106px]" alt="Pratap Chandra Chunder">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pratap Chandra Chunder</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1977 - 1979</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-51.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/3031.gif" class="w-[75px] h-[106px]" alt="Phulrenu Guha">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Phulrenu Guha</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1967 - 1970</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-705.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/3819.jpg" class="w-[75px] h-[106px]" alt="P. Upendra">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Upendra</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1989 - 1990</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-703.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2533.gif" class="w-[75px] h-[106px]" alt="P. Ramachandran">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Ramachandran</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1977 - 1979</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-709.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Panjabrao_Deshmukh_1999_stamp_of_India.jpg" class="w-[75px] h-[106px]" alt="Panjabrao Deshmukh">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Panjabrao Deshmukh</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1952 - 1957</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-716.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/306.jpg" class="w-[75px] h-[106px]" alt="Prahlad Singh Patel">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prahlad Singh Patel</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2003 - 2024</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-9.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2192.gif" class="w-[75px] h-[106px]" alt="Prabhudas Patel">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prabhudas Patel</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1974 - 1977</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-141.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/P.P._Chaudhary_delivering_the_inaugural_address_at_the_Plenary_Session_of_the_three-day_International_Competition_Network_Annual_Conference_2018_(ICN2018),_organised_by_the_Competition_Commission_of_India,_in_New_Delhi.jpg" class="w-[75px] h-[106px]" alt="P P Choudhary">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P P Choudhary</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2016 - 2019</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-129.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Shri_Ashok_Gajapati_Raju.jpg" class="w-[75px] h-[106px]" alt="Pusapati Ashok Gajapati Raju">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pusapati Ashok Gajapati Raju</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2014 - 2018</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-204.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/890.gif" class="w-[75px] h-[106px]" alt="Purnendu Sekhar Naskar">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Purnendu Sekhar Naskar</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1962 - 1971</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-706.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/P.V._Rangayya_Naidu_IPS.jpg" class="w-[75px] h-[106px]" alt="P. V. Rangaiah Naidu">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. V. Rangaiah Naidu</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1991 - 1996</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-713.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/1408.gif" class="w-[75px] h-[106px]" alt="Pendekanti Venkatasubbaiah">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pendekanti Venkatasubbaiah</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1980 - 1989</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-701.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/P_C_Thomas.jpg" class="w-[75px] h-[106px]" alt="P. C. Thomas">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. C. Thomas</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2003 - 2004</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-4.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2022.gif" class="w-[75px] h-[106px]" alt="P. Ankineedu Prasada Rao">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Ankineedu Prasada Rao</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1979 - 1979</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-16.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/2225.gif" class="w-[75px] h-[106px]" alt="P. Venkata Reddy">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Venkata Reddy</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1980 - 1982</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-13.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="ls_images/Q108663917.png" class="w-[75px] h-[106px]" alt="P Namgyal">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P Namgyal</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1988 - 1989</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-27.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="rs_images/Q111716997.png" class="w-[75px] h-[106px]" alt="Prof. D. P. Yadav">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prof. D. P. Yadav</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1971 - 1977</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-28.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/1973.gif" class="w-[75px] h-[106px]" alt="Prof. Sher Singh">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Prof. Sher Singh</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1967 - 1979</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-31.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/1885.gif" class="w-[75px] h-[106px]" alt="P. Parthasarathy">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">P. Parthasarathy</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 1970 - 1971</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-719.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%E0%B2%B6%E0%B3%8D%E0%B2%B0%E0%B3%80_%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%B2%E0%B3%8D%E0%B2%B9%E0%B2%BE%E0%B2%A6_%E0%B2%9C%E0%B3%8B%E0%B2%B6%E0%B2%BF.JPG" class="w-[75px] h-[106px]" alt="Pralhad Joshi">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pralhad Joshi</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2019 - 2024</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-147.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Pratap_Chandra_Sarangi.jpg" class="w-[75px] h-[106px]" alt="Pratap Chandra Sarangi">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pratap Chandra Sarangi</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2019 - 2021</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-641.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/4983.jpg" class="w-[75px] h-[106px]" alt="Pratima Bhoumik">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pratima Bhoumik</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2021 - 2024</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-250.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Pashupati_Kumar_Paswan.jpg" class="w-[75px] h-[106px]" alt="Pashupati Kumar Paras">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pashupati Kumar Paras</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2021 - 2024</p>
+                                    </div>
+                                </div>
+				
+                                <div onclick="location.href='officer-710.html';" style="cursor: pointer;"
+                                    class="bg-white p-5 flex flex-col justify-center items-center rounded-sm shadow-md">
+                                    <img src="http://loksabhadocs.nic.in/mpimage/photo/3479.jpg" class="w-[75px] h-[106px]" alt="Pankaj Choudhary">
+                                    <div class="text-center mt-3.5">
+                                        <h4 class="text-base">Pankaj Choudhary</h4>
+                                        <p class="text-[11px] text-[#999999]">Tenure: 2021 - 2024</p>
+                                    </div>
+                                </div>
+				
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer Bottom -->
+        <footer>
+            <div class=" bg-gray-200 w-full p-5 z-50 relative hidden sm:block">
+                <div class=" flex flex-col sm:flex-row items-center gap-2.5 text-gray-500 text-sm">
+                    <img src="./assets/images/footer-logo.png" alt="">
+                    <div class="flex">
+                        <p class=" xs:border-l xs:border-r border-gray-500 px-2.5 hover:underline"><a
+                                href="disclaimer.html">Disclaimer</a></p>
+
+                    </div>
+                    <div class=" flex gap-2">
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"
+                                height="30">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z" />
+                            </svg>
+                        </span>
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"
+                                height="30">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm2 6a1 1 0 0 1 1 1v4h-1.5v4h-3v-4H9v-4a1 1 0 0 1 1-1h4zm-2-5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>

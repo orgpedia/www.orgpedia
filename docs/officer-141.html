@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minister: P P Choudhary</title>	
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="../dist/output.css">
+
+        <style>
+            /* Scrollbar Styling */
+            ::-webkit-scrollbar {
+                width: 10px;
+                height: 5px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: #ebebeb;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background: #6d6d6d;
+            }
+	    
+	    .hide-element,
+	    .primary.hide-element {
+		display: none;
+	    }
+	</style>	    
+
+        <link rel="stylesheet" href="css/output.css">
+	<script src="https://unpkg.com/lunr/lunr.js"></script>
+	<script defer data-domain="orgpedia.in" src="https://plausible.io/js/plausible.js"></script>	
+	<script>
+	  var current_tenure_idx=0;
+	  const url = "officer-141.html";
+	  const tenure_info_array = [
+  {
+    "ministry": "1st Narendra Modi Ministry",
+    "dept": "Ministry of Information Technology",
+    "role": "Minister of State",
+    "date_str": "5 July 2016 - 3 September 2017",
+    "start_order_id": "1_Upload_229.pdf",
+    "end_order_id": "1_Upload_1269.pdf",
+    "start_order_url": "order-1_Upload_229.pdf.html#Page5",
+    "end_order_url": "order-1_Upload_1269.pdf.html#Page2",
+    "manager_infos": [
+      {
+        "full_name": "P P Choudhary",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/P.P._Chaudhary_delivering_the_inaugural_address_at_the_Plenary_Session_of_the_three-day_International_Competition_Network_Annual_Conference_2018_(ICN2018),_organised_by_the_Competition_Commission_of_India,_in_New_Delhi.jpg",
+        "role": "Minister of State",
+        "date_str": "5 July 2016 - 3 September 2017"
+      },
+      {
+        "full_name": "Ravi Shankar Prasad",
+        "image_url": "http://loksabhadocs.nic.in/mpimage/photo/5219.jpg",
+        "role": "Cabinet Minister",
+        "date_str": "5 July 2016 - 30 May 2019"
+      },
+      {
+        "full_name": "Narendra Modi",
+        "image_url": "http://loksabhadocs.nic.in/mpimage/photo/4589.jpg",
+        "role": "Prime Minister",
+        "date_str": "26 May 2014 - 30 May 2019"
+      }
+    ]
+  },
+  {
+    "ministry": "1st Narendra Modi Ministry",
+    "dept": "Ministry of Law and Justice",
+    "role": "Minister of State",
+    "date_str": "5 July 2016 - 30 May 2019",
+    "start_order_id": "1_Upload_229.pdf",
+    "end_order_id": "",
+    "start_order_url": "order-1_Upload_229.pdf.html#Page5",
+    "end_order_url": "",
+    "manager_infos": [
+      {
+        "full_name": "P P Choudhary",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/P.P._Chaudhary_delivering_the_inaugural_address_at_the_Plenary_Session_of_the_three-day_International_Competition_Network_Annual_Conference_2018_(ICN2018),_organised_by_the_Competition_Commission_of_India,_in_New_Delhi.jpg",
+        "role": "Minister of State",
+        "date_str": "5 July 2016 - 30 May 2019"
+      },
+      {
+        "full_name": "Ravi Shankar Prasad",
+        "image_url": "http://loksabhadocs.nic.in/mpimage/photo/5219.jpg",
+        "role": "Cabinet Minister",
+        "date_str": "5 July 2016 - 30 May 2019"
+      },
+      {
+        "full_name": "Narendra Modi",
+        "image_url": "http://loksabhadocs.nic.in/mpimage/photo/4589.jpg",
+        "role": "Prime Minister",
+        "date_str": "26 May 2014 - 30 May 2019"
+      }
+    ]
+  },
+  {
+    "ministry": "1st Narendra Modi Ministry",
+    "dept": "Ministry of Corporate Affairs",
+    "role": "Minister of State",
+    "date_str": "3 September 2017 - 30 May 2019",
+    "start_order_id": "1_Upload_1266.pdf",
+    "end_order_id": "",
+    "start_order_url": "order-1_Upload_1266.pdf.html#Page6",
+    "end_order_url": "",
+    "manager_infos": [
+      {
+        "full_name": "P P Choudhary",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/P.P._Chaudhary_delivering_the_inaugural_address_at_the_Plenary_Session_of_the_three-day_International_Competition_Network_Annual_Conference_2018_(ICN2018),_organised_by_the_Competition_Commission_of_India,_in_New_Delhi.jpg",
+        "role": "Minister of State",
+        "date_str": "3 September 2017 - 30 May 2019"
+      },
+      {
+        "full_name": "Arun Jaitley",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/The_official_photograph_of_the_Defence_Minister,_Shri_Arun_Jaitley.jpg",
+        "role": "Cabinet Minister",
+        "date_str": "27 May 2014 - 14 May 2018"
+      },
+      {
+        "full_name": "Narendra Modi",
+        "image_url": "http://loksabhadocs.nic.in/mpimage/photo/4589.jpg",
+        "role": "Prime Minister",
+        "date_str": "26 May 2014 - 30 May 2019"
+      }
+    ]
+  }
+];
+	</script>
+	<script src="js/search.js"></script>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <div
+                class="bg-black text-gray-50 h-[98px] flex top-0 items-center px-2 lg:px-4 py-2.5 border-b-[9px] border-blue-500 fixed z-50 w-full">
+                <div class="container flex flex-wrap justify-between items-center mx-auto ">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center order-2 lg:order-1">
+                        <div class="w-[53px] h-[53px] bg-white flex justify-center items-center rounded-full mr-2.5">
+                            <p class="text-[30px] text-black w-[53px] h-[53px] text-center"><span
+                                    class="text-blue-500">o</span>p
+                            </p>
+                        </div>
+                        <div class=" text-[45px] text-white flex flex-col items-center justify-center">
+                            <img src="./assets/images/logo.png" class="w-32 xs:w-48 lg:w-full" alt="">
+                            <p
+                                class="text-xs xs:text-sm text-right -mb-3 lg:mb-0 -mr-9 xs:-mr-[70px] lg:-mr-20 xs:-mt-0.5">
+                                Ministers of India</p>
+                        </div>
+                    </a>
+
+                    <!--  Search Input -->
+                    <div class="lg:min-w-[450px] order-1 lg:order-2">
+                        <div class="hidden lg:block">
+                            <form id="search-form" name="searchForm" role="form" onsubmit="return false">
+                                <div class="flex items-center gap-4 ">
+                                    <span class="text-xs whitespace-nowrap">Search by</span>
+                                    <div class="relative search-container">
+				      <i class="fa fa-search"></i>				      				      
+                                        <input type="search" id="search" name="q" autocomplete="off"
+                                            class="block h-[30px] lg:w-[450px] text-sm pl-4 text-gray-900 bg-white outline-none"
+                                            placeholder="Enter keywords order, ministry, ministers" required="">
+                                        <div
+                                            class="flex absolute inset-y-0 right-0.5 items-center pl-3 mr-1.5 pointer-events-none">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-blue-500 dark:text-gray-400"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Toggle Menu Btn  -->
+                        <button data-menu-open-btn="" type="button" class="inline-flex lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-11 w-11" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Language Select Input -->
+                    <div class=" order-3 lg:order-3">
+                        <div class="hidden lg:block">
+                            <div class="flex items-center">
+                                <button id="language-button"
+                                    class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm text-center text-gray-50 bg-black "
+                                    type="button">
+                                    English
+                                </button>
+				<select name="lang_menu" id="lang_menu" class="bg-black text-gray-50 text-sm rounded-r-lg outline-none" onchange="select_language()">
+                                    <option selected="ignore">Select Language</option>
+                                    <option value="en">English</option>
+                                    <option value="as">অসমীয়া(Assamese)</option>
+                                    <option value="bn">বাংলা(Bangla)</option>
+                                    <option value="brx">बड़ो(Boro)</option>
+				    <option value="doi">डोगरी(Dogri)</option>
+				    <option value="gu">ગુજરાતી(Gujrati)</option>
+				    <option value="hi">हिन्दी(Hindi)</option>
+				    <option value="kn">ಕನ್ನಡ(Kannada)</option>
+				    <option value="gom">कोंकणी(Konkani)</option>
+				    <option value="mai">मैथिली(Maithili)</option>
+				    <option value="mni">ꯃꯩꯇꯩꯂꯣꯟ(Meitei)</option>
+				    <option value="ml">മലയാളം(Malayalam)</option>
+				    <option value="mr">मराठी(Marathi)</option>
+				    <option value="ne">नेपाली(Nepali)</option>
+				    <option value="or">ଓଡ଼ିଆ(Odia)</option>
+				    <option value="pa">ਪੰਜਾਬੀ(Punjabi)</option>
+  				    <option value="sa">संस्कृत(Sanskrit)</option>
+  				    <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ(Santhali)</option>
+  				    <option value="sd">सिंधी(Sindhi)</option>
+  				    <option value="te">తెలుగు(Telgu)</option>
+  				    <option value="ta">தமிழ்(Tamil)</option>
+  				    <option value="ur">اُردُو(Urdu)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Search box  -->
+                        <div>
+                            <span data-search-box="" class="lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-white w-8 h-8"
+                                    viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z">
+                                    </path>
+                                </svg>
+                            </span>
+
+                            <div data-search-box-toggle="" class=" hidden lg:hidden duration-700 ease-in-out">
+                                <span data-search-box-close=""
+                                    class="bg-black/50 h-screen w-screen z-40 absolute top-[98px] left-0"></span>
+                                <div
+                                    class="font-sans absolute  top-[98px] left-0 w-screen text-white flex items-center min-h-screen justify-center">
+                                    <div class="relative rounded overflow-hidden flex -mt-24 z-50 mobileSearchContainer">
+                                        <input type="search" id="mobileSearch" name="mq" autocomplete="off"
+                                            class="px-4 py-2 text-base outline-none border-b-2 text-center border-dashed border-t-0 border-l-0 border-r-0 focus:border-white border-white min-w-[300px] md:min-w-[400px] w-full bg-black/0"
+                                            placeholder="Search...">
+                                        <button class="absolute right-0 top-1 flex items-center justify-center  ">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="fill-current text-white w-8 h-8" viewBox="0 0 24 24" width="24"
+                                                height="24">
+                                                <path
+                                                    d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Main Container -->
+        <div class="flex p-2 sm:p-5 xs:gap-5 pt-[120px] sm:pt-[120px]">
+
+            <!-- Side Navigation Menu -->
+            <div data-sidebar=""
+                class="min-w-[300px] lg:min-w-[170px] max-w-[170px] fixed h-screen top-0 left-0 lg:top-auto lg:left-auto  z-50 w-full ease-in lg:ease-linear duration-200  -translate-x-full lg:-translate-x-0">
+                <div class="container fixed">
+                    <nav class="h-screen shadow-md bg-gray-200 px-1  z-40">
+                        <div class="flex justify-end w-full py-4 px-2 lg:hidden ">
+                            <button data-sidebar-close-btn="" type="button"
+                                class="inline-flex w-10 h-10 justify-center items-center bg-white hover:bg-slate-100 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current w-9 h-9 text-black"
+                                    viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="p-4 pl-5 text-xs text-blue-500">
+                            <li class="mb-3.5">
+                                <a class="" href="prime.html">
+                                    Prime Ministers
+                                </a>
+                            </li class="mb-3.5">
+                            <li class="mb-3.5">
+                                <a class="" href="deputy.html">
+                                    Deputy Prime Ministers
+                                </a>
+                            </li>
+                            <li class="mb-3.5 cursor-pointer">
+                                <a class="" href="officers-A.html">
+                                    <span data-all-minister="">Ministers</span>
+                                    <ul class="text-black font-semibold ml-4 hidden" data-minister-list="">
+                                        <li class="my-2">
+                                            <a href="#" class="hover:text-blue-500">Sumitra Mahajan</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 1</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 2</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 3</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 4</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 5</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 6</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="#" class="hover:text-blue-500">Minister 7</a>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mb-3.5">
+                                <a class="" href="orders-m1.html">
+                                    Orders
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+            <main class="lg:flex-grow w-full  min-h-screen lg:ml-[190px]">
+	      <section class="search-results hide-element">
+                <div class=" sm:container mx-auto ">
+                    <div class="flex gap-1.5 items-center justify-start text-blue-500 text-sm mb-4">
+                        <span class="cursor-pointer">Home</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                class="fill-current w-5 h-5 text-gray-500" width="24" height="24">
+                                <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="cursor-pointer"> Search</span>
+                    </div>
+                    <div class="w-full bg-gray-200 p-3 sm:p-6">
+                      <h2 id="query" class="text-2xl text-blue-500 font-bold mb-6"></h2>
+                      <div id="search-cells" class="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-5 lg:gap-7"></div>
+		    </div>
+		</div>
+	      </section>
+                <section class=" container mx-auto primary">
+                    <div class="flex gap-1.5 items-center justify-start text-blue-500 text-sm mb-4">
+                        <span class="cursor-pointer">Cabinets</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                class="fill-current w-5 h-5 text-gray-500" width="24" height="24">
+                                <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="cursor-pointer"> Ministers</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                class="fill-current w-5 h-5 text-gray-500" width="24" height="24">
+                                <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="font-bold text-black">P P Choudhary</span>
+                    </div>
+                    <div class=" p-3 lg:p-[21px] w-full bg-gray-200 min-h-screen">
+                        <div class="flex flex-col lg:flex-row w-full">
+                            <div class="lg:max-w-[468px] ">
+                                <div class="flex flex-col">
+
+                                    <!-- Left Side Minister  -->
+                                    <div class="mb-[26px]">
+                                        <h2 class="text-2xl font-bold text-blue-500 mb-4">P P CHOUDHARY</h2>
+                                        <div class="flex gap-2 md:gap-5">
+                                            <div class="max-w-[147px]">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/P.P._Chaudhary_delivering_the_inaugural_address_at_the_Plenary_Session_of_the_three-day_International_Competition_Network_Annual_Conference_2018_(ICN2018),_organised_by_the_Competition_Commission_of_India,_in_New_Delhi.jpg" alt="P P Choudhary"
+                                                    class="min-w-[120px] w-full h-[218px] lg:h-auto object-cover ">
+                                            </div>
+                                            <div class="flex flex-col lg:max-w-[200px] text-sm text-[#333333]">
+                                              <p class="text-[#666666] mb-2">Key Tenures: </p>
+					      
+                                                <div class=" mb-2">
+                                                    <h4 class="font-semibold"> Ministry of Law and Justice, Minister of State</h4>
+                                                    <p class="text-[#666666]"> July 2016 - May 2019</p>
+                                                </div>
+						
+                                                <div class=" mb-2">
+                                                    <h4 class="font-semibold"> Ministry of Corporate Affairs, Minister of State</h4>
+                                                    <p class="text-[#666666]"> September 2017 - May 2019</p>
+                                                </div>
+						
+                                                <div class=" mb-2">
+                                                    <h4 class="font-semibold"> Ministry of Information Technology, Minister of State</h4>
+                                                    <p class="text-[#666666]"> July 2016 - September 2017</p>
+                                                </div>
+						
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-atal-accordian=""
+                                            class=" flex flex-row items-center gap-2 cursor-pointer">
+                                            <span
+                                                class="h-6 w-6 bg-white flex justify-center items-center rounded-md border border-[#666666]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    class="fill-current w-3 h-3">
+                                                    <path
+                                                        d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                            <p class="font-semibold text-base text-blue-500 border-r-0">1st Narendra Modi Ministry</p>
+                                        </div>
+                                        <div
+                                            class="flex flex-row lg:flex-col flex-nowrap w-full overflow-hidden lg:overflow-visible overflow-x-scroll lg:overscroll-none gap-3 md:gap-5 text-sm">
+                                            <div id="tenure-0"
+                                                class=" bg-white border border-blue-500 lg:border-r-0 relative cursor-pointer text-sm" onclick="updatePanel(0)">
+                                                <div id="tenure-child-0"
+                                                    class="p-2 w-full h-full min-w-[210px] relative bg-white focus:bg-white z-20 lg:-right-1 -bottom-4 lg:-bottom-0 text-[#333333]">
+                                                    <h4 class="font-semibold mb-2">Ministry of Information Technology</h4>
+                                                    <p>Minister of State</p>
+                                                </div>
+
+                                            </div>
+					    
+					    
+					    
+					    
+                                            <div id="tenure-1"
+                                                class=" bg-[#D9D9D9] border border-[#B8B8B8] border-r-0 cursor-pointer text-sm text-[#333333]" onclick="updatePanel(1)">
+                                              <div id="tenure-child-1"
+						   class="p-2 w-full h-full  min-w-[210px]">
+                                                    <h4 class="font-semibold mb-2">Ministry of Law and Justice</h4>
+                                                    <p>Minister of State</p>
+                                                </div>
+                                            </div>
+					    
+					    
+					    
+                                            <div id="tenure-2"
+                                                class=" bg-[#D9D9D9] border border-[#B8B8B8] border-r-0 cursor-pointer text-sm text-[#333333]" onclick="updatePanel(2)">
+                                              <div id="tenure-child-2"
+						   class="p-2 w-full h-full  min-w-[210px]">
+                                                    <h4 class="font-semibold mb-2">Ministry of Corporate Affairs</h4>
+                                                    <p>Minister of State</p>
+                                                </div>
+                                            </div>
+					    
+					    
+					</div> <! --- CHECK THIS OUT -->
+					
+					
+				      					    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side Minister of state -->
+                            <div class="flex-grow -mt-1.5 lg:-mt-0">
+                                <h2 id="rt-ministry" class="text-base font-semibold text-blue-500 mb-1.5 hidden lg:block">1st Narendra Modi Ministry</h2>
+                                <div class=" border border-blue-500 bg-white " data-minister-hide="">
+                                    <div class="p-5 flex flex-col">
+                                        <div class=" text-[#333333]">
+                                            <h5 class="text-sm">Tenure Info</h5>
+                                            <h3 id="rt-dept" class="text-[base] font-bold">Ministry of Information Technology,</h3>
+                                            <h3 id="rt-role" class="text-[base] font-bold">Minister of State</h3>	    
+                                            <p id="rt-date_str" class="text-base mb-3">5 July 2016 - 3 September 2017</p>
+                                            <a href="#" class="font-semibold text-blue-500 text-base">Orders</a>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="flex gap-4 items-center">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="fill-current w-8 h-8 text-red-500" viewBox="0 0 24 24"
+                                                        width="24" height="24">
+                                                        <path
+                                                            d="M8.267 14.68c-.184 0-.308.018-.372.036v1.178c.076.018.171.023.302.023.479 0 .774-.242.774-.651 0-.366-.254-.586-.704-.586zm3.487.012c-.2 0-.33.018-.407.036v2.61c.077.018.201.018.313.018.817.006 1.349-.444 1.349-1.396.006-.83-.479-1.268-1.255-1.268z">
+                                                        </path>
+                                                        <path
+                                                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM9.498 16.19c-.309.29-.765.42-1.296.42a2.23 2.23 0 0 1-.308-.018v1.426H7v-3.936A7.558 7.558 0 0 1 8.219 14c.557 0 .953.106 1.22.319.254.202.426.533.426.923-.001.392-.131.723-.367.948zm3.807 1.355c-.42.349-1.059.515-1.84.515-.468 0-.799-.03-1.024-.06v-3.917A7.947 7.947 0 0 1 11.66 14c.757 0 1.249.136 1.633.426.415.308.675.799.675 1.504 0 .763-.279 1.29-.663 1.615zM17 14.77h-1.532v.911H16.9v.734h-1.432v1.604h-.906V14.03H17v.74zM14 9h-1V4l5 5h-4z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <p id="rt-start_order_id" class="text-sm font-bold">1_Upload_229.pdf</p>
+                                            </div>
+                                            <div class="flex gap-4 items-center">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="fill-current w-8 h-8 text-red-500" viewBox="0 0 24 24"
+                                                        width="24" height="24">
+                                                        <path
+                                                            d="M8.267 14.68c-.184 0-.308.018-.372.036v1.178c.076.018.171.023.302.023.479 0 .774-.242.774-.651 0-.366-.254-.586-.704-.586zm3.487.012c-.2 0-.33.018-.407.036v2.61c.077.018.201.018.313.018.817.006 1.349-.444 1.349-1.396.006-.83-.479-1.268-1.255-1.268z">
+                                                        </path>
+                                                        <path
+                                                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM9.498 16.19c-.309.29-.765.42-1.296.42a2.23 2.23 0 0 1-.308-.018v1.426H7v-3.936A7.558 7.558 0 0 1 8.219 14c.557 0 .953.106 1.22.319.254.202.426.533.426.923-.001.392-.131.723-.367.948zm3.807 1.355c-.42.349-1.059.515-1.84.515-.468 0-.799-.03-1.024-.06v-3.917A7.947 7.947 0 0 1 11.66 14c.757 0 1.249.136 1.633.426.415.308.675.799.675 1.504 0 .763-.279 1.29-.663 1.615zM17 14.77h-1.532v.911H16.9v.734h-1.432v1.604h-.906V14.03H17v.74zM14 9h-1V4l5 5h-4z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <p id="rt-end_order_id" class="text-sm font-bold">1_Upload_1269.pdf</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="block h-[1px] w-full bg-[#B6B6B6]"></span>
+                                    <!-- Manager Design -->
+                                    <div class="p-5 pb-14">
+                                        <div
+                                          class="grid gap-3 items-center relative  border-l border-dashed border-black mt-10 text-[#333333]">
+					  
+                                            <span
+                                              class="absolute left-0 z-10 h-[1px] w-7 border-t border-dashed border-black "></span>
+					    
+					    
+                                            <div class=" sm:max-w-[395px] border-t border-dashed border-black pl-7">
+                                                <div 
+                                                    class="flex  items-center gap-2.5 p-[5px] border border-[#C3C3C3]  w-full relative -mt-11 bg-white">
+                                                    <img id="rt-manager-image_url-0" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/P.P._Chaudhary_delivering_the_inaugural_address_at_the_Plenary_Session_of_the_three-day_International_Competition_Network_Annual_Conference_2018_(ICN2018),_organised_by_the_Competition_Commission_of_India,_in_New_Delhi.jpg"
+                                                        class="w-[54px] h-[73px] object-cover" alt="P P Choudhary">
+                                                    <div class="">
+                                                        <h5 class=" text-xs xs:text-sm">Manager</h5>
+                                                        <h3 id="rt-manager-full_name-0"class="font-bold text-base leading-5">P P Choudhary
+							</h3>
+                                                        <p id="rt-manager-role-0" class="text-xs xs:text-sm leading-5">Minister of State
+                                                        </p>
+                                                        <p id="rt-manager-date_str-0" class="text-xs leading-5">5 July 2016 - 3 September 2017</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+					    
+                                            <div class=" sm:max-w-[395px]  border-dashed border-black pl-7">
+                                                <div 
+                                                    class="flex  items-center gap-2.5 p-[5px] border border-[#C3C3C3]  w-full  bg-white">
+                                                    <img id="rt-manager-image_url-1" src="http://loksabhadocs.nic.in/mpimage/photo/5219.jpg"
+                                                        class="w-[54px] h-[73px] object-cover" alt="Ravi Shankar Prasad">
+                                                    <div class="">
+                                                        <h5 class=" text-xs xs:text-sm">Manager</h5>
+                                                        <h3 id="rt-manager-full_name-1"class="font-bold text-base leading-5">Ravi Shankar Prasad
+							</h3>
+                                                        <p id="rt-manager-role-1" class="text-xs xs:text-sm leading-5">Cabinet Minister
+                                                        </p>
+                                                        <p id="rt-manager-date_str-1" class="text-xs leading-5">5 July 2016 - 30 May 2019</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+					    
+                                            <div class=" sm:max-w-[395px] border-b border-dashed border-black pl-7">
+                                                <div 
+                                                    class="flex  items-center gap-2.5 p-[5px] border border-[#C3C3C3]  w-full -mb-11 bg-white">
+                                                    <img id="rt-manager-image_url-2" src="http://loksabhadocs.nic.in/mpimage/photo/4589.jpg"
+                                                        class="w-[54px] h-[73px] object-cover" alt="Narendra Modi">
+                                                    <div class="">
+                                                        <h5 class=" text-xs xs:text-sm">Manager</h5>
+                                                        <h3 id="rt-manager-full_name-2"class="font-bold text-base leading-5">Narendra Modi
+							</h3>
+                                                        <p id="rt-manager-role-2" class="text-xs xs:text-sm leading-5">Prime Minister
+                                                        </p>
+                                                        <p id="rt-manager-date_str-2" class="text-xs leading-5">26 May 2014 - 30 May 2019</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+					    
+                                        </div>
+                                    </div>
+                                    <span class="block h-[1px] w-full bg-[#B6B6B6]"></span>
+
+                                    <div class="p-4">
+                                        <div class="px-4 text-base">
+					  &nbsp;<br><br><br><br><br><br>
+                                        </div>
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="lg:hidden">
+                            <div class="flex flex-row items-center gap-2 mt-3 text-sm">
+                                <span
+                                    class="h-6 w-6 bg-white flex justify-center items-center rounded-md border border-[#666666]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        class="fill-current w-3 h-3">
+                                        <path
+                                            d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <h3 class="font-semibold text-base text-blue-500 border-r-0">4th Atal
+                                    Bihari
+                                    Vajpayee Ministry</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer Bottom -->
+        <footer>
+            <div class=" bg-gray-200 w-full p-5 z-50 relative hidden sm:block">
+                <div class=" flex flex-col sm:flex-row items-center gap-2.5 text-gray-500 text-sm">
+                    <img src="./assets/images/footer-logo.png" alt="">
+                    <div class="flex">
+                        <p class=" xs:border-l xs:border-r border-gray-500 px-2.5 hover:underline"><a
+                                href="disclaimer.html">Disclaimer</a></p>
+
+                    </div>
+                    <div class=" flex gap-2">
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"
+                                height="30">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z" />
+                            </svg>
+                        </span>
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"
+                                height="30">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm2 6a1 1 0 0 1 1 1v4h-1.5v4h-3v-4H9v-4a1 1 0 0 1 1-1h4zm-2-5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/script.js"></script>
+
+    </body>
+
+</html>
