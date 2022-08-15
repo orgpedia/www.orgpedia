@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
         <!-- CSS Link -->
         <link rel="stylesheet" href="css/output.v9.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">		
 	<script src="https://unpkg.com/lunr/lunr.js"></script>	
 	<script src="js/search.js"></script>
 	<script defer data-domain="orgpedia.in" src="https://plausible.io/js/plausible.js"></script>		
@@ -82,6 +83,7 @@
 
                     <!-- Language Select Input -->
                     <div class=" order-3 lg:order-3">
+		      <!--
                         <div class="hidden lg:block">
                             <div class="flex items-center">
                                 <button id="language-button"
@@ -116,6 +118,7 @@
                                 </select>
                             </div>
                         </div>
+			-->
 
                         <!-- Search box  -->
                         <div>
@@ -187,39 +190,18 @@
                                 </a>
                             </li>
                             <li class="mb-3.5 cursor-pointer">
-                                <a class="" href="officers-A.html">
-                                    <span data-all-minister="">Ministers</span>
-                                    <ul class="text-black font-semibold ml-4 hidden" data-minister-list="">
-                                        <li class="my-2">
-                                            <a href="#" class="hover:text-blue-500">Sumitra Mahajan</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 1</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 2</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 3</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 4</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 5</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 6</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="#" class="hover:text-blue-500">Minister 7</a>
-                                        </li>
-                                    </ul>
+                              <a class="" href="officers-A.html">
+				Ministers
                                 </a>
                             </li>
                             <li class="mb-3.5">
-                                <a class="" href="orders-m1.html">
+                                <a class="" href="orders-1947-1952.html">
                                     Orders
+                                </a>
+                            </li>
+                            <li class="mb-3.5">
+                                <a class="" href="disclaimer.html">
+                                    Disclaimer
                                 </a>
                             </li>
                         </ul>
@@ -381,8 +363,7 @@
                                 <div class="flex-1 lg:pt-11 xl:p-3 ">
                                     <div class="">
                                         <div class=" mb-2">
-                                          <!-- <p class="text-xs text-[#333333]">Page 1 of 4</p> -->
-                                          <p class="text-xs text-[#333333]">  </p>					  
+                                          <p class="text-xs text-[#333333]">All Pages</p>
                                         </div>
 
                                         <div class="bg-white">
@@ -391,10 +372,10 @@
                                                   class="flex flex-col gap-2.5 p-2 sm:p-5 overflow-y-scroll h-screen"> <!-- changed this -->
 
 						  						  
-                                                    <div onclick="location.href='officer-6.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -404,7 +385,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-6.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4589.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -432,10 +413,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-287.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-288.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Defence_Minister_Shri_Rajnath_Singh_in_February_2020.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -457,10 +438,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-425.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-426.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Amit_Shah_new.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -482,10 +463,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-286.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-287.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4923.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -508,10 +489,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-43.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-43.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Sadananda_Gowda.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -533,10 +514,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-698.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-701.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Nirmala_Sitharaman_-_2018_(46166396231)_(cropped).jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -559,10 +540,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-571.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-572.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/296.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -584,10 +565,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-694.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -597,7 +578,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-697.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4507.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -626,10 +607,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-344.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -639,7 +620,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-345.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/5219.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -667,10 +648,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-833.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-836.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Thaawar_Chand_Gehlot_addressing_at_the_distribution_ceremony_of_the_aids_and_assistive_devices_to_the_students_with_visual_impairments_under_ADIP_scheme_of_the_Ministry_of_Social_Justice_&_Empowerment.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -692,10 +673,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-104.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-105.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Subrahmanyam_Jaishankar_2014.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -717,10 +698,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-298.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-299.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Dr._Ramesh_Pokhriyal_%27Nishank%27%2C_2020.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -742,10 +723,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-294.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-295.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Arjun_Munda_8992.JPG"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -767,10 +748,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-804.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-807.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/5133.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -793,10 +774,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-69.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-69.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Harsh_Vardhan_briefing_the_media_persons_on_the_showcasing_of_solar_technology-led_innovations_with_the_support_of_Department_of_Science_&_Technology,_in_New_Delhi.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -818,10 +799,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-718.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -831,7 +812,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-721.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Shri_Prakash_Javadekar,_Minister_of_State_for_Information_and_Broadcasting_(Independent_Charge),_Environment,_Forest_and_Climate_Change_(Independent_Charge)_and_Parliamentary_Affairs(cropped).jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -859,10 +840,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-714.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-717.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Piyush_Goyal_(cropped).jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -885,10 +866,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-523.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-524.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/3999.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -911,10 +892,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-684.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-687.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhaph.nic.in/writereaddata/biodata_1_12/3887.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -936,10 +917,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-719.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -949,7 +930,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-722.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%E0%B2%B6%E0%B3%8D%E0%B2%B0%E0%B3%80_%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%B2%E0%B3%8D%E0%B2%B9%E0%B2%BE%E0%B2%A6_%E0%B2%9C%E0%B3%8B%E0%B2%B6%E0%B2%BF.JPG"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -977,10 +958,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-140.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-141.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4917.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1002,10 +983,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-125.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-126.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4641.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1027,10 +1008,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-144.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-145.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4670.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1052,10 +1033,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-775.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-778.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/131.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1077,10 +1058,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-750.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-753.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/3904.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1103,10 +1084,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-799.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-802.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Shripad_Yasso_Naik_-_Kolkata_2014-10-12_7755.JPG"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1129,10 +1110,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-594.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-596.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Jitendra_Singh.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1154,10 +1135,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-645.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-648.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/3972.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1180,10 +1161,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-716.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-719.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/306.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1206,10 +1187,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-101.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -1219,7 +1200,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-102.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Minister_of_State_%28IC%29_for_Power_and_New_and_Renewable_Energy%2C_Shri_Raj_Kumar_Singh_addressing_a_Curtain_Raiser_Press_Conference_regarding_2nd_Global_RE-invest%2C_in_New_Delhi_on_September_25%2C_2018_%28cropped%29.JPG"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1247,10 +1228,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-551.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -1260,7 +1241,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-552.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Hardeep_Singh_Puri_-_2018_(45176824921)_(cropped).jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1288,10 +1269,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-201.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-202.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Mansukh_L._Mandaviya_addressing_at_the_launch_of_the_‘Janaushadhi_Suvidha_-_Oxo-Biodegradable_Sanitary_Napkins’_under_the_‘Pradhan_Mantri_Bhartiya_Janaushadhi_Pariyojana_(PMBJP)’,_in_New_Delhi.JPG"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1314,10 +1295,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-536.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-537.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/207.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1339,10 +1320,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-119.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-120.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4650.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1364,10 +1345,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-439.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-440.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4399.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1390,10 +1371,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-849.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-852.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/VK_singh.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1415,10 +1396,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-122.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-123.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/The_Minister_of_State_for_Women_and_Child_Development%2C_Smt._Krishna_Raj_addressing_at_the_presentation_ceremony_of_the_National_Awards_to_Anganwadi_Workers_for_the_year_2014-15_and_2015-16%2C_in_New_Delhi_on_December_22%2C_2016.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1440,10 +1421,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-751.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-754.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/316.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1465,10 +1446,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-539.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-540.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/G._Kishan_Reddy.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1490,10 +1471,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-711.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-714.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Parshottam_Rupala_addressing_the_inaugural_session_of_the_International_Symposium_on_Drafting_a_National_Policy_on_Medicinal_and_Aromatic_Plants_of_India,_in_New_Delhi.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1515,10 +1496,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-448.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-449.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/24.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1540,10 +1521,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-123.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-124.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4622.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1565,10 +1546,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-541.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-542.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4704.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1590,10 +1571,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-143.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-144.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4921.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1615,10 +1596,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-771.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      						      
-                                                        <button
+                                                        <button onclick="readMore()"
                                                             class="w-6 h-6 flex-shrink-0 cursor-pointer  bg-white flex justify-center items-center rounded-md border border-[#666666] ">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 class="fill-current w-3 h-3">
@@ -1628,7 +1609,7 @@
                                                             </svg>
                                                         </button>
 							
-                                                        <div
+                                                        <div onclick="location.href='officer-774.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Sanjaydhotre.png"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1656,10 +1637,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-435.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-436.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Anurag_Thakur.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1682,10 +1663,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-121.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-122.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4625.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1707,10 +1688,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-99.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-100.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Shri_Rattan_Lal_Kataria_taking_charge_as_the_Minister_of_State_for_Jal_Shakti%2C_in_New_Delhi_on_May_31%2C_2019_%28cropped%29.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1733,10 +1714,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-59.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-59.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/V._Muraleedharan.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1759,10 +1740,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-127.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-128.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Renuka_Singh.png"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1784,10 +1765,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-103.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-104.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/159.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1809,10 +1790,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-128.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-129.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/4745.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1834,10 +1815,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-147.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-148.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Pratap_Chandra_Sarangi.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1860,10 +1841,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-254.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-255.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="http://loksabhadocs.nic.in/mpimage/photo/5207.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1885,10 +1866,10 @@
                                                         </div>
                                                     </div>
 						    						  
-                                                    <div onclick="location.href='officer-637.html';" style="cursor: pointer;"
+                                                    <div 
                                                       class=" flex justify-between gap-3 p-2.5 border border-[#C3C3C3]">
 						      
-                                                        <div
+                                                        <div onclick="location.href='officer-640.html';" style="cursor: pointer;"
                                                             class="flex items-start justify-between gap-2.5 bg-white flex-grow">
                                                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Sushri_Debasree_Chaudhuri_5_March_2020_%28cropped%29.jpg"
                                                                 class="w-[54px] h-[73px] object-cover" alt="">
@@ -1932,6 +1913,24 @@
                                 href="disclaimer.html">Disclaimer</a></p>
 
                     </div>
+
+                    <div class="flex">
+                        <p class="xs:border-r border-gray-500 px-2.5 hover:underline"><a
+                                href="mailto:info@orgpedia.in?subject=order-1_Upload_2405.pdf">Report a data error</a></p>
+
+                    </div>
+                                <div onclick="location.href='https://github.com/orgpedia/cabsec';" style="cursor: pointer;" class="flex xs:border-r border-gray-500 px-2.5">
+                                    <span class="text-blue-500"><a href="#">View on GitHub</a></span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current "
+                                            viewBox="0 0 24 24" width="24" height="24">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+		    
                     <div class=" flex gap-2">
                         <span class="">
                             <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="30"

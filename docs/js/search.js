@@ -16,14 +16,12 @@ function getJSON(url) {
 };
 
 function initSearchIndex() {
-    //getJSON('http://0.0.0.0:8500/lunr.idx.json').then(function(data) {    
     getJSON('lunr.idx.json').then(function(data) {
 	searchIndex = lunr.Index.load(data);
     }, function(status) { 
 	console.log('Unable to load the search index.');
     });
-
-    //getJSON('http://0.0.0.0:8500/docs.json').then(function(data) {    
+    
     getJSON('docs.json').then(function(data) {
 	pagesIndex = data
     }, function(status) { //error detection....
@@ -106,7 +104,7 @@ function clearSearchResults() {
 
 
 function updateSearchResults(query, results) {
-    document.getElementById("query").innerHTML = "Search Terms: " + query + `(${results.length} results)`;
+    document.getElementById("query").innerHTML = "Search Terms: \"" + query + "\" " + `(${results.length} results)`;
     document.getElementById("search-cells").innerHTML = results
         .map(
             (hit) => `
@@ -185,6 +183,7 @@ function hideSearchResults() {
 
 
 function handleClearSearchButtonClicked() {
+    console.log('INSIDE MOBILE SEARCH.');	
     hideSearchResults();
     clearSearchResults();
     document.getElementById("search").value = "";
@@ -257,12 +256,18 @@ document.addEventListener("DOMContentLoaded", function () {
     	    if (event.keyCode == 13) handleMobileSearch(event);
 	});
     }
+
+    if (document.getElementById("clear-search-results") != null) {
+	const button = document.getElementById("clear-search-results");
+	button.addEventListener("click", () => handleClearSearchButtonClicked());
+    }
+
     
-    document
-	.querySelectorAll(".clear-search-results")
-	.forEach((button) =>
-	    button.addEventListener("click", () => handleClearSearchButtonClicked())
-	);
+    // document
+    // 	.querySelectorAll("clear-search-results")
+    // 	.forEach((button) =>
+    // 	    button.addEventListener("click", () => handleClearSearchButtonClicked())
+    // 	);
 });
 
 const sel_color="bg-white border border-blue-500 lg:border-r-0 relative cursor-pointer text-sm";

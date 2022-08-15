@@ -6,7 +6,7 @@ const allMinisterList = document.querySelector('[data-minister-list]')
 const searchBox = document.querySelector('[data-search-box]')
 const searchBoxToggle = document.querySelector('[data-search-box-toggle]')
 const searchBoxClose = document.querySelector('[data-search-box-close]')
-const showMoreBtn = document.querySelector('[data-show-more-btn]')
+
 const showMoreText = document.querySelector('[data-show-more-text]')
 const atalAccordian = document.querySelector('[data-atal-accordian]')
 const ministerHide = document.querySelector('[data-minister-hide]')
@@ -41,14 +41,11 @@ searchBoxClose.addEventListener('click', function () {
     searchBoxToggle.classList.add('hidden')
 })
 
-atalAccordian.addEventListener('click', (e) => {
+atalAccordian.addEventListener('click', function () {
     atalAccordian.nextElementSibling.classList.toggle('hidden')
     ministerHide.classList.toggle('hidden')
-    console.log('object');
 })
 
-// Show More Text 
-showMoreBtn.addEventListener('click', (e) => {
+function readMore() {
     showMoreText.classList.toggle('hidden')
-})
-
+}

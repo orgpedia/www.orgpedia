@@ -1,0 +1,54 @@
+const menuOpenBtn = document.querySelector('[data-menu-open-btn]')
+const menuCloseBtn = document.querySelector('[data-sidebar-close-btn]')
+const sidebar = document.querySelector('[data-sidebar]')
+const allMinister = document.querySelector('[data-all-minister]')
+const allMinisterList = document.querySelector('[data-minister-list]')
+const searchBox = document.querySelector('[data-search-box]')
+const searchBoxToggle = document.querySelector('[data-search-box-toggle]')
+const searchBoxClose = document.querySelector('[data-search-box-close]')
+const showMoreBtn = document.querySelector('[data-show-more-btn]')
+const showMoreText = document.querySelector('[data-show-more-text]')
+const atalAccordian = document.querySelector('[data-atal-accordian]')
+const ministerHide = document.querySelector('[data-minister-hide]')
+
+
+// Menu open 
+menuOpenBtn.addEventListener('click', function () {
+    sidebar.classList.remove('-translate-x-full')
+    sidebar.classList.add('translate-x-0')
+})
+
+// Menu close 
+menuCloseBtn.addEventListener('click', function () {
+    sidebar.classList.remove('translate-x-0')
+    sidebar.classList.add('-translate-x-full')
+})
+
+
+// All Minister List Menu 
+allMinister.addEventListener('click', function () {
+    allMinisterList.classList.toggle('hidden')
+})
+
+// Search Box Open 
+searchBox.addEventListener('click', function () {
+    searchBoxToggle.classList.remove('hidden')
+    searchBoxToggle.classList.add('block')
+})
+
+// Search Box close 
+searchBoxClose.addEventListener('click', function () {
+    searchBoxToggle.classList.add('hidden')
+})
+
+atalAccordian.addEventListener('click', (e) => {
+    atalAccordian.nextElementSibling.classList.toggle('hidden')
+    ministerHide.classList.toggle('hidden')
+    console.log('object');
+})
+
+// Show More Text 
+showMoreBtn.addEventListener('click', (e) => {
+    showMoreText.classList.toggle('hidden')
+})
+
