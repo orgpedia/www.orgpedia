@@ -16,13 +16,13 @@ function getJSON(url) {
 };
 
 function initSearchIndex() {
-    getJSON('http://0.0.0.0:8500/lunr.idx.json').then(function(data) {
+    getJSON('lunr.idx.json').then(function(data) {
 	searchIndex = lunr.Index.load(data);
     }, function(status) { 
 	console.log('Unable to load the search index.');
     });
     
-    getJSON('http://0.0.0.0:8500/docs.json').then(function(data) {
+    getJSON('docs.json').then(function(data) {
 	pagesIndex = data
     }, function(status) { //error detection....
 	console.log('Unable to load docs.');
