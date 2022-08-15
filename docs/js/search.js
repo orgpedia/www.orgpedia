@@ -16,13 +16,13 @@ function getJSON(url) {
 };
 
 function initSearchIndex() {
-    getJSON('lunr.idx.json').then(function(data) {
+    getJSON('http://0.0.0.0:8500/lunr.idx.json').then(function(data) {
 	searchIndex = lunr.Index.load(data);
     }, function(status) { 
 	console.log('Unable to load the search index.');
     });
     
-    getJSON('docs.json').then(function(data) {
+    getJSON('http://0.0.0.0:8500/docs.json').then(function(data) {
 	pagesIndex = data
     }, function(status) { //error detection....
 	console.log('Unable to load docs.');
@@ -113,7 +113,7 @@ function updateSearchResults(query, results) {
         <img src="${hit.image_url}" class="w-[75px] h-[106px]" alt="${hit.full_name}">        
         <div class="text-center mt-3.5">
             <h4 class="text-base">${hit.full_name}</h4>
-            <p class="text-[11px] text-[#999999]">Tenure: ${hit.key_start1} - ${hit.key_end1}</p>
+            <p class="text-[11px] text-[#999999]">Tenure: ${hit.tenure_str}</p>
        </div>
     </div>
     `
@@ -135,7 +135,7 @@ function createSearchResultBlurb(query, hit) {
 	  <td>
 	    <h4 style="font-family: Tahoma, Geneva, sans-serif;">Key Tenures</h4>
 	    <ul>
-	      <li><p><b>${hit.key_dept1}</b>&nbsp; ${hit.key_start1} - ${hit.key_end1}
+	      <li><p><b>${hit.key_dept1}</b>&nbsp; ${hit.tenure_str}
 	    </ul>
 	  </td>
 	</tr>
